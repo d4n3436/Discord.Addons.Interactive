@@ -1,8 +1,8 @@
-﻿namespace Discord.Addons.Interactive
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
+namespace Discord.Addons.Interactive
+{
     /// <summary>
     /// The paginated message.
     /// </summary>

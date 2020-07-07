@@ -1,24 +1,23 @@
-﻿namespace Discord.Addons.Interactive
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Discord.Commands;
+using Discord.WebSocket;
+
+namespace Discord.Addons.Interactive
 {
-    using System;
-    using System.Linq;
-    using System.Threading.Tasks;
-
-    using Discord.Commands;
-    using Discord.WebSocket;
-
     /// <summary>
     /// The inline reaction callback.
     /// </summary>
     public class InlineReactionCallback : IReactionCallback
     {
         /// <summary>
-        /// The interactive.
+        /// The interactive service.
         /// </summary>
         private readonly InteractiveService interactive;
 
         /// <summary>
-        /// The data.
+        /// The callback data.
         /// </summary>
         private readonly ReactionCallbackData data;
 
@@ -26,13 +25,13 @@
         /// Initializes a new instance of the <see cref="InlineReactionCallback"/> class.
         /// </summary>
         /// <param name="interactive">
-        /// The interactive.
+        /// The interactive service.
         /// </param>
         /// <param name="context">
         /// The context.
         /// </param>
         /// <param name="data">
-        /// The data.
+        /// The callback data.
         /// </param>
         /// <param name="criterion">
         /// The criterion.
@@ -76,7 +75,7 @@
         public IUserMessage Message { get; private set; }
 
         /// <summary>
-        /// The display async.
+        /// Sends the message and adds the reaction callback.
         /// </summary>
         /// <returns>
         /// The <see cref="Task"/>.
@@ -107,7 +106,7 @@
         }
 
         /// <summary>
-        /// handles callbacks (reactions from users)
+        /// Handle the reaction callbacks.
         /// </summary>
         /// <param name="reaction">
         /// The reaction.

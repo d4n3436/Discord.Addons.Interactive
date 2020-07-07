@@ -1,15 +1,13 @@
-﻿// ReSharper disable StyleCop.SA1600
+﻿using System.Threading.Tasks;
+using Discord.Commands;
+using Discord.WebSocket;
+
 namespace Discord.Addons.Interactive
 {
-    using System.Threading.Tasks;
-
-    using Discord.Commands;
-    using Discord.WebSocket;
-
     public class EnsureSourceChannelCriterion : ICriterion<SocketMessage>
     {
         /// <summary>
-        /// Returns true if the channel is the source channel
+        /// Ensures the message channel is the source channel.
         /// </summary>
         /// <param name="sourceContext">
         /// The source context.

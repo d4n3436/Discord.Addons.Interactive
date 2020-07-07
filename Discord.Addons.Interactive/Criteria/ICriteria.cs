@@ -1,14 +1,12 @@
-﻿// ReSharper disable StyleCop.SA1600
+﻿using System.Threading.Tasks;
+using Discord.Commands;
+
 namespace Discord.Addons.Interactive
 {
-    using System.Threading.Tasks;
-
-    using Discord.Commands;
-
     public interface ICriterion<in T>
     {
         /// <summary>
-        /// The judge async.
+        /// Ensures that all the criteria are successful.
         /// </summary>
         /// <param name="sourceContext">
         /// The source context.

@@ -1,15 +1,13 @@
-﻿// ReSharper disable StyleCop.SA1600
+﻿using System.Threading.Tasks;
+using Discord.Commands;
+using Discord.WebSocket;
+
 namespace Discord.Addons.Interactive
 {
-    using System.Threading.Tasks;
-
-    using Discord.Commands;
-    using Discord.WebSocket;
-
     public class EnsureIsIntegerCriterion : ICriterion<SocketMessage>
     {
         /// <summary>
-        /// Ensures the input number is an integer
+        /// Ensures the message content is an integer.
         /// </summary>
         /// <param name="sourceContext">
         /// The source context.
